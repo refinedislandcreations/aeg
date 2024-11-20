@@ -16,6 +16,7 @@ header:
 ---
 
 <header class="relative max-w-screen-2xl mx-auto">
+  {% for item in page.header %}
   <!-- Fixed Navigation Positioned Over Image on Smaller Screens -->
   <div class="absolute top-0 left-0 right-0 flex flex-col items-center px-5p py-5p sm:py-2p md:py-5p z-20 text-white sm:fixed sm:flex-row sm:justify-between sm:items-center sm:text-black nav-bg">
     <div class="sm:max-w-screen-2xl sm:mx-auto flex flex-col sm:flex-row sm:justify-between items-center w-full">
@@ -57,6 +58,7 @@ header:
       />
     </div>
   </div>
+  {% endfor %}
 </header>
 
 
