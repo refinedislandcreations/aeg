@@ -689,6 +689,10 @@ a {
   font-size: 1.25rem;
   line-height: 1.2;
 }
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
 .font-bold {
   font-weight: 700;
 }
