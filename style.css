@@ -129,31 +129,42 @@ header {
 
 /* Scrolling Text */
 
-@keyframes infiniteScroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
+.tickerBanner{
+  --bannerBlockLength: 280px;
+  --bannerBlockTime: 2s;
+overflow-X: hidden;
+display: flex;
+flex-direction: row;
+text-align: center;
 }
 
-.scroll-container {
-  width: 100%;
-  overflow-x: hidden;
+
+.tickerBanner .img {
+  width: 600px;
+  height: 400px;
+  flex-shrink: 0;
+}
+
+.tickerBanner > * {
+  display: inline-block;
+  padding: 1vw;
+  flex-shrink: 0;
   position: relative;
 }
 
-.horizontal-scrolling-items {
-  display: flex;
-  font-size: 24px; /* Adjusted font size */
-  width: 100%;
-  animation: infiniteScroll 15s linear infinite;
+.tickerBanner.active > * {
+  animation: ticker 2s infinite linear;
+  animation-duration: var(--bannerBlockTime), 2s;
+} 
+
+.tickerBanner:hover > *{
+  animation-play-state: paused;
 }
 
-.horizontal-scrolling-items__item {
-  white-space: nowrap;
-  padding-right: 100%; /* Ensure space between repeats */
+
+@keyframes ticker {
+    from {right:0}
+    to   {right:var(--bannerBlockLength)}
 }
 
 

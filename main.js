@@ -63,3 +63,60 @@ AOS.init({
     thumbnail.addEventListener('mouseenter', changeTarget);
   });
 
+
+
+  // horizontal scroller 
+
+  const tickerBanners = document.querySelectorAll('.tickerBanner');
+
+console.log(tickerBanners)
+
+tickerBanners.forEach(banner => {
+
+
+
+  let textBlock = banner.querySelectorAll('.text-block');
+
+
+
+  let bannerBlock = 0;
+  textBlock.forEach( block => {
+    bannerBlock += block.offsetWidth
+  });
+
+  let bannerLength = bannerBlock
+  console.log(bannerBlock)
+  console.log(bannerLength)
+  
+  
+  banner.style.setProperty('--bannerBlockLength', `${bannerBlock}px`);
+  banner.style.setProperty('--bannerBlockTime', `${(bannerBlock / 25)}s`);
+
+  
+  function extendBanner() {
+    // debugger
+  if (bannerLength < (screen.width + bannerBlock) ) {
+    textBlock.forEach(block => {
+      console.log(block.innerHTML)
+      // add the newly created element and its content into the DOM
+      banner.appendChild(block.cloneNode(true));
+      // banner.querySelector('a:last-child').innerHTML = block.innerHTML
+      // banner.querySelector('a:last-child').href = block.href
+      
+    });
+    bannerLength += bannerBlock;
+    console.log(bannerLength) 
+    extendBanner()
+  } else {
+    banner.classList.add('active')
+  }
+
+  }
+
+
+
+  extendBanner()
+
+  console.log(bannerLength)
+
+})
