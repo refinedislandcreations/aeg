@@ -108,8 +108,8 @@ header {
   font-weight: 300;
   font-size: 1rem;
   color: #f5f4ef; /* Light text color */
-  background-color: #004d40; /* Dark green background */
-  border: 2px solid #004d40; /* Border matches the background color */
+  background-color: #345a80; /* Dark green background */
+  border: 2px solid #345a80; /* Border matches the background color */
   border-radius: 0.375rem; /* Rounded corners */
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -121,7 +121,7 @@ header {
 /* Hover Effect */
 .button:hover {
   background-color: #f5f4ef; /* Light background color on hover */
-  color: #004d40; /* Dark green text color on hover */
+  color: #345a80; /* Dark green text color on hover */
   border-color: #f5f4ef; /* Border matches the background color on hover */
 }
 

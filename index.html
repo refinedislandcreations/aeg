@@ -150,23 +150,15 @@ google-maps:
 <!-- Banner Section -->
 <section class="max-w-screen-2xl mx-auto">
   <div class="dark-bg text-light banner-font sm:py-2p flex items-center justify-center h-20 sm:h-40">
-    <div class="scroll-container">
-      <div class="horizontal-scrolling-items">
-        <div class="horizontal-scrolling-items__item">
-          {% for item in page.horizontal-banner %}
-          <p>{{item.text}}</p>
-          {% endfor %}
-        </div>
-      </div>
+    <div class="tickerBanner">
+      {% for item in page.horizontal-banner %}
+      <p class="text-block">{{item.text}}</p>
+      {% endfor %}
     </div>
   </div>
 </section>
 
-<div class="tickerBanner">
-  {% for item in page.horizontal-banner %}
-  <p class="text-block">{{item.text}}</p>
-  {% endfor %}
-</div>
+
 
 
 
@@ -421,7 +413,7 @@ google-maps:
   </div>
   <div class="map-container p-5p xl:px-5p xl:py-2p">
     <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31568.269074367672!2d115.2454397839759!3d-8.496110608896684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23d739f22c9c3%3A0x54a38afd6b773d1c!2sUbud%2C%20Gianyar%20Regency%2C%20Bali!5e0!3m2!1sen!2sid!4v1725860806754!5m2!1sen!2sid"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.797697611886!2d115.17861799999999!3d-8.710752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd246c8f543bb33%3A0xea735a01c5a8f04e!2sJl.%20Patih%20Jelantik%20No.21%2C%20Legian%2C%20Kec.%20Kuta%2C%20Kabupaten%20Badung%2C%20Bali%2080361!5e0!3m2!1sen!2sid!4v1732509221408!5m2!1sen!2sid" 
       class="w-full h-full border-0"
       allowfullscreen=""
       loading="lazy"
