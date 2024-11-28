@@ -21,32 +21,32 @@ horizontal-banner:
 text-and-images:
  - pretitle: PT AEG BAli
    title: Our Customers
-   paragraph: AEG customers include leading hotels and bou>que resorts, industrial food and beverage manufacturers, reputed interna>onal residen>al property developers and operators, and individual residen>al property owners and managers.
-   image-1: /images/gallery-1.png
-   image-1-alt: View from the garden
-   image-2: /images/gallery-2.png
-   image-2-alt: Cozy living area with jungle view
-   image-3: /images/gallery-3.png
-   image-3-alt: Spacious bedroom with natural light
-   image-4: /images/gallery-4.png
-   image-4-alt: Elegant bathroom with modern fixtures
-   image-5: /images/gallery-5.png
-   image-5-alt: Relaxing outdoor seating area
-   image-6: /images/gallery-6.png
-   image-6-alt: Scenic pool view surrounded by greenery
+   paragraph: AEG customers include leading hotels and boutique resorts, industrial food and beverage manufacturers, reputed international residential property developers and operators, and individual residential property owners and managers.
+   image-1: /images/indonesia-aeg.png
+   image-1-alt: alt text
+   image-2: /images/vietnam-aeg.png
+   image-2-alt: alt text
+   image-3: /images/aeg-compact-skid-unit.png
+   image-3-alt: alt text
+   image-4: /images/aeg-container-unit.png
+   image-4-alt: alt text
+   image-5: /images/aeg-eliminate-toxic-substances.png
+   image-5-alt: alt text
+   image-6: /images/nsf-logo-aeg.png
+   image-6-alt: alt text
 background-text-banner:
  - text: Recycling for reuse from natural water and industrial sources, using advanced proven and patented technology from Europe.
-   image: /images/banner-quote.png
+   image: /images/aeg-water-background.png
    image-position: 50% 50%
 grid-section:
  - title: Book your free consultation with us.
-   image-1: /images/details-2.png
+   image-1: /images/aeg-workflow.png
    image-1-position: 50% 50%
    image-1-alt: alt-text
    image-1-pre-title: Work-flow
    image-1-title: Simple & clear 3 steps process
    image-1-paragraph: "We enable the most comprehensive and sustainable, tailored solution for your individual project needs and objectives. All design criteria to produce drinking water quality are considered, including the toughest international standards from Europe & Asia, such as Singapore and Japan, and foremost the strictest Indonesian regulations as per the latest PERMENKES, 2 of 2023."
-   image-2: /images/details-5.png
+   image-2: /images/nsf-logo-aeg.png
    image-2-position: 50% 50%
    image-2-alt: alt text
    image-2-pre-title: Your assurance
@@ -60,13 +60,13 @@ grid-section:
    image-2-extra-description-2: "Public Drinking Water Equipment Performance – Filtration"
    image-2-link-2: https://info.nsf.org/Certified/PDWE/Listings.asp?Company=C0584424&Standard=419
    image-2-link-2-text: Find out more
-   image-3: /images/details-1.png
+   image-3: /images/aeg-Client-P&ID.png
    image-3-position: 50% 50%
    image-3-alt: alt text
    image-3-pre-title: PT AEG Bali
    image-3-title: Innovative technology integrator
    image-3-paragraph: The fully automated system by ALPHA ENVIRONMENTAL GROUP takes natural raw water from bore wells or river and treats it in a single filtration step. AEG water treatment systems enables the most compact design to fit your drinking water quality production system into the smallest spaces, without any noise or odor generated during operation. The core filtration technology applied by ALPHA ENVIRONMENTAL GROUP is a submerged ceramic membrane patented and manufactured in Germany, and eliminates toxic substances that can be found in your natural groundwater, rainwater and other water sources. 
-   image-4: /images/details-4.png
+   image-4: /images/aeg-leaders.png
    image-4-position: 50% 50%
    image-4-alt: alt tex
    image-4-pre-title: 
@@ -90,8 +90,8 @@ booking:
    button-2-text: Email
    button-3-url: https://www.instagram.com/tiptap_bali/
    button-3-text: Instagram
-   image: /images/banner-quote.png
-   image-position: 50% 50%
+   image: /images/aeg-water-background.png
+   image-position: 50% 5%
 google-maps:
  - pre-title: 
    title: Where you can find us.
@@ -101,10 +101,12 @@ google-maps:
 <header class="relative max-w-screen-2xl mx-auto">
   {% for item in page.header %}
   <!-- Fixed Navigation Positioned Over Image on Smaller Screens -->
-  <div class="absolute top-0 left-0 right-0 flex flex-col items-center px-5p py-5p sm:py-2p md:py-5p z-20 text-white sm:fixed sm:flex-row sm:justify-between sm:items-center sm:text-black nav-bg">
+  <div class="absolute top-0 left-0 right-0 z-50 flex flex-col items-center px-5p py-5p sm:py-2p md:py-5p text-white sm:fixed sm:flex-row sm:justify-between sm:items-center sm:text-black nav-bg">
     <div class="sm:max-w-screen-2xl sm:mx-auto flex flex-col sm:flex-row sm:justify-between items-center w-full">
       <h2 class="text-2xl mb-2 sm:mb-0">
-        <a href="/index">PT AEG BALI</a>
+        <a href="/index">
+          <img src="/images/aeg-logo.png" alt="" class="h-12">
+        </a>
       </h2>
       <nav class="tracking-wide flex space-x-4">
         <a href="#customers">Our Customers</a>
@@ -167,6 +169,7 @@ google-maps:
 <section class="max-w-screen-2xl mx-auto" id="customers">
   {% for item in page.text-and-images %}
   <div class="md:grid md:grid-cols-3 pt-10p px-5p mb-5p sm:mb-0 sm:p-5p sm:gap-5">
+    <!-- Text Content -->
     <div class="col-span-1 flex flex-col justify-center items-start pr-5p">
       <p class="small-font pb-2p">{{item.pretitle}}</p>
       <p class="text-2xl title-font pb-5p sm:pb-2p md:pb-0">{{item.title}}</p>
@@ -174,14 +177,63 @@ google-maps:
     <div class="col-span-2 flex items-center">
       <p class="pb-5p md:pb-0">{{item.paragraph}}</p>
     </div>
-    <!-- Updated gallery section -->
-    <div class="col-span-3 flex flex-wrap justify-center gap-3">
-      <div class="gallery-pic" data-aos="fade-down" style="background-image:url('{{item.image-1}}');" alt="{{item.image-1-alt}}"></div>
-      <div class="gallery-pic" data-aos="fade-down" style="background-image:url('{{item.image-2}}');" alt="{{item.image-2-alt}}"></div>
-      <div class="gallery-pic" data-aos="fade-down" style="background-image:url('{{item.image-3}}');" alt="{{item.image-3-alt}}"></div>
-      <div class="gallery-pic" data-aos="fade-down" style="background-image:url('{{item.image-4}}');" alt="{{item.image-4-alt}}"></div>
-      <div class="gallery-pic" data-aos="fade-down" style="background-image:url('{{item.image-5}}');" alt="{{item.image-5-alt}}"></div>
-      <div class="gallery-pic" data-aos="fade-down" style="background-image:url('{{item.image-6}}');" alt="{{item.image-6-alt}}"></div>
+
+    <!-- Gallery Section -->
+    <div class="col-span-3 grid grid-cols-2 sm:grid-cols-3 gap-3 justify-center">
+      <!-- Image 1 -->
+      <div class="gallery-pic relative" data-aos="fade-down">
+        <img 
+          loading="lazy" 
+          class="w-full h-full object-contain" 
+          src="{{item.image-1}}" 
+          alt="{{item.image-1-alt}}" 
+        />
+      </div>
+      <!-- Image 2 -->
+      <div class="gallery-pic relative" data-aos="fade-down">
+        <img 
+          loading="lazy" 
+          class="w-full h-full object-contain" 
+          src="{{item.image-2}}" 
+          alt="{{item.image-2-alt}}" 
+        />
+      </div>
+      <!-- Image 3 -->
+      <div class="gallery-pic relative" data-aos="fade-down">
+        <img 
+          loading="lazy" 
+          class="w-full h-full object-contain" 
+          src="{{item.image-3}}" 
+          alt="{{item.image-3-alt}}" 
+        />
+      </div>
+      <!-- Image 4 -->
+      <div class="gallery-pic relative" data-aos="fade-down">
+        <img 
+          loading="lazy" 
+          class="w-full h-full object-contain" 
+          src="{{item.image-4}}" 
+          alt="{{item.image-4-alt}}" 
+        />
+      </div>
+      <!-- Image 5 -->
+      <div class="gallery-pic relative" data-aos="fade-down">
+        <img 
+          loading="lazy" 
+          class="w-full h-full object-contain" 
+          src="{{item.image-5}}" 
+          alt="{{item.image-5-alt}}" 
+        />
+      </div>
+      <!-- Image 6 -->
+      <div class="gallery-pic relative" data-aos="fade-down">
+        <img 
+          loading="lazy" 
+          class="w-full h-full object-contain" 
+          src="{{item.image-6}}" 
+          alt="{{item.image-6-alt}}" 
+        />
+      </div>
     </div>
   </div>
   {% endfor %}
@@ -194,20 +246,25 @@ google-maps:
 
 
 
-<!-----BG and Text-------->
 
-<section class="max-w-screen-2xl mx-auto" >
+
+<!-----BG and Text-------->
+<section class="max-w-screen-2xl mx-auto">
   {% for item in page.background-text-banner %}
   <div class="relative">
-    <div class="bg-cover bg-no-repeat"
-        style="background-image: url('{{item.image}}'); height: 24rem; background-position: {{ image-position }};">
+    <!-- Image Background with Overlay -->
+    <div class="bg-cover bg-no-repeat relative"
+         style="background-image: url('{{item.image}}'); height: 24rem; background-position: {{ image-position }};">
+      
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-[#345a80] opacity-50"></div>
+      
+      <!-- Text on Top of Image -->
       <div class="absolute inset-0 flex items-center justify-center p-5p">
         <div class="p-8 text-center">
-          
           <p class="banner-font text-light text-xl sm:text-3xl lg:text-4xl">
             {{item.text}}
           </p>
-          
         </div>
       </div>
     </div>
@@ -226,17 +283,16 @@ google-maps:
   <div class="pt-10p px-5p sm:pt-5p">
     <p class="title-font text-2xl sm:text-4xl pb-5p sm:pr-5p">{{item.title}}</p>
     <div class="sm:grid sm:grid-cols-2 gap-5 mb-5">
-      <!-- Image 1 -->
-      <div class="relative col-span-1 min-h-40 sm:min-h-60">
-        <div class="absolute inset-0">
-          <img 
-            loading="lazy"
-            class="w-full h-full object-cover"
-            src="{{item.image-1}}"
-            style="object-position: {{item.image-1-position}};"
-            alt="{{item.image-1-alt}}" 
-          />
-        </div>
+      
+      <!------Image 1------>
+      <div class="relative col-span-1 aspect-[16/9]">
+        <img 
+          loading="lazy"
+          class="w-full h-full object-contain"
+          src="{{item.image-1}}"
+          style="object-position: {{item.image-1-position}};"
+          alt="{{item.image-1-alt}}" 
+        />
       </div>
 
       <!-- Text Content -->
@@ -247,17 +303,16 @@ google-maps:
       </div>
 
       <!-- Image 2 -->
-      <div class="relative col-span-1 min-h-40 sm:min-h-60">
-        <div class="absolute inset-0">
-          <img 
-            loading="lazy"
-            class="w-full h-full object-cover"
-            src="{{item.image-2}}"
-            style="object-position: {{item.image-2-position}};"
-            alt="{{item.image-2-alt}}" 
-          />
-        </div>
+      <div class="relative col-span-1 aspect-[16/9]">
+        <img 
+          loading="lazy"
+          class="w-full h-full object-contain"
+          src="{{item.image-2}}"
+          style="object-position: {{item.image-2-position}};"
+          alt="{{item.image-2-alt}}" 
+        />
       </div>
+    
 
       <!-- Text Content -->
       <div class="col-span-1 flex flex-col justify-center pt-5p pb-10p sm:pt-0 sm:pb-0" data-aos="fade-down">
@@ -273,17 +328,15 @@ google-maps:
       </div>
 
       <!-- Image 3 -->
-      <div class="relative col-span-1 min-h-40 sm:min-h-60">
-        <div class="absolute inset-0">
-          <img 
-            loading="lazy"
-            class="w-full h-full object-cover"
-            src="{{item.image-3}}"
-            style="object-position: {{item.image-3-position}};"
-            alt="{{item.image-3-alt}}" 
-          />
-        </div>
-      </div>
+  <div class="relative col-span-1 aspect-[16/9]">
+    <img 
+      loading="lazy"
+      class="w-full h-full object-contain"
+      src="{{item.image-3}}"
+      style="object-position: {{item.image-3-position}};"
+      alt="{{item.image-3-alt}}" 
+    />
+  </div>
 
       <!-- Text Content -->
       <div class="col-span-1 flex flex-col justify-center pt-5p pb-10p sm:pt-0 sm:pb-0" data-aos="fade-down">
@@ -294,22 +347,21 @@ google-maps:
 
 
       <!-- Image 4 -->
-      <div class="relative col-span-1 min-h-40 sm:min-h-60">
-        <div class="absolute inset-0">
-          <img 
-            loading="lazy"
-            class="w-full h-full object-cover"
-            src="{{item.image-4}}"
-            style="object-position: {{item.image-4-position}};"
-            alt="{{item.image-4-alt}}" 
-          />
-        </div>
-      </div>
+
+<div class="relative col-span-1 aspect-[16/9]">
+  <img 
+    loading="lazy"
+    class="w-full h-full object-contain"
+    src="{{item.image-4}}"
+    style="object-position: {{item.image-4-position}};"
+    alt="{{item.image-4-alt}}" 
+  />
+</div>
 
 
     
         <!-- Text Content -->
-        <div class="col-span-1 flex flex-col justify-center pt-5p sm:pt-0" data-aos="fade-down">
+        <div class="col-span-1 flex flex-col justify-center items-center pt-5p sm:pt-0" data-aos="fade-down">
           <div>
             <p class="small-font pb-2p">{{item.image-4-pre-title}}</p>
             <p class="text-2xl title-font pb-2p">{{item.image-4-title}}</p>
@@ -362,12 +414,17 @@ google-maps:
 
 
 
-
-<!-- Booking Options -->
+<!-----------Booking options-->
 <section class="max-w-screen-2xl mx-auto my-10" id="contact">
   {% for item in page.booking %}
   <div class="relative">
-    <div class="bg-cover bg-no-repeat" style="background-image: url('{{item.image}}'); height: 24rem; background-position: {{ item.image-position }};">
+    <!-- Image Background with Overlay -->
+    <div class="bg-cover bg-no-repeat relative" style="background-image: url('{{item.image}}'); height: 24rem; background-position: {{ item.image-position }};">
+      
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-[#345a80] opacity-50"></div>
+      
+      <!-- Text and Buttons on Top of Image -->
       <div class="absolute inset-0 sm:flex items-center justify-center p-5p">
         <div class="p-8 text-center text-light">
           
@@ -395,6 +452,7 @@ google-maps:
   </div>
   {% endfor %}
 </section>
+
 
 
 
